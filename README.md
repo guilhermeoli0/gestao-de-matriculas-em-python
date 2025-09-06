@@ -39,7 +39,7 @@ Como Executar o Projeto:
 
 1. Clone o repositório
 ```
-git clone https://github.com/seu-usuario/sistema-matriculas.git
+git clone https://github.com/guilhermeoli0/sistema-matriculas.git
 cd sistema-matriculas
 ```
 2. Verifique se o Python está instalado
