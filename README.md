@@ -39,14 +39,12 @@ Como Executar o Projeto:
 
 1. Clone o repositório
 ```
-git clone https://github.com/guilhermeoli0/sistema-matriculas.git
+https://github.com/guilhermeoli0/gerenciamento-de-matrículas-em-python.git
 cd sistema-matriculas
 ```
 2. Verifique se o Python está instalado
 ```
-python --version
-# ou
-python3 --version
+python ou python3 
 ```
 > Se não tiver o Python, baixe em: https://www.python.org/downloads/
 
