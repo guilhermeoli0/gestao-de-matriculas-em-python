@@ -2,11 +2,12 @@ Sistema de Gestão de Matrículas
 ---
 Um sistema simples e intuitivo para gerenciar matrículas escolares, desenvolvido em Python com interface gráfica tkinter. Ideal para instituições de ensino de pequeno porte ou projetos acadêmicos.
 
-> Cadastra alunos, cursos e turmas  
-> Realiza matrículas  
-> Salva dados em arquivos locais do tipo .txt  
-> Interface amigável e visualmente agradável  
-> Totalmente offline e fácil de usar
+> Funções:
+> Cadastra alunos, cursos e turmas;
+> Realiza matrículas;
+> Salva dados em arquivos locais do tipo .txt;  
+> Interface amigável e visualmente agradável;  
+> Totalmente offline, seguro e fácil de usar.
 
 
 
