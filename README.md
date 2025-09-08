@@ -41,6 +41,7 @@ Como Executar o Projeto:
 ```
 https://github.com/guilhermeoli0/gerenciamento-de-matrículas-em-python.git
 ```
+```
 cd sistema-matriculas
 ```
 2. Verifique se o Python está instalado
