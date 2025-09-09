@@ -1,22 +1,22 @@
-# sistema_matriculas_gui.py
+#Projeto de Sistema de Matrículas - sistema_matriculas_gui.py
 
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 import os
 
-# --- ARQUIVOS DE DADOS ---
+#ARQUIVOS PARA ARMAZENAMENTO
 ARQUIVO_ALUNOS = "alunos.txt"
 ARQUIVO_CURSOS = "cursos.txt"
 ARQUIVO_TURMAS = "turmas.txt"
 ARQUIVO_MATRICULAS = "matriculas.txt"
 
-# --- LISTAS PARA ARMAZENAR DADOS ---
+#LISTAS PARA ARMAZENAR DADOS
 alunos = []
 cursos = []
 turmas = []
 matriculas = []
 
-# --- FUNÇÕES PARA CARREGAR DADOS DOS ARQUIVOS ---
+#FUNÇÕES PARA CARREGAR DADOS DOS ARQUIVOS
 def carregar_dados():
     if os.path.exists(ARQUIVO_ALUNOS):
         with open(ARQUIVO_ALUNOS, "r", encoding="utf-8") as f:
@@ -96,7 +96,7 @@ def carregar_dados():
                         turma["alunos"].append(aluno)
                         matriculas.append({"aluno_id": aluno_id, "turma_id": turma_id})
 
-# --- FUNÇÕES PARA SALVAR DADOS ---
+#FUNÇÕES PARA ARMAZENAR DADOS
 def salvar_aluno_txt(aluno):
     with open(ARQUIVO_ALUNOS, "a", encoding="utf-8") as f:
         f.write(f"{aluno['id']} | {aluno['nome']} | {aluno['cpf']} | {aluno['rg']} | {aluno['nascimento']}\n")
@@ -113,7 +113,7 @@ def salvar_matricula_txt(aluno_id, turma_id):
     with open(ARQUIVO_MATRICULAS, "a", encoding="utf-8") as f:
         f.write(f"{len(matriculas)+1} | {aluno_id} | {turma_id}\n")
 
-# --- FUNÇÕES DE AÇÃO ---
+#FUNÇÕES DE AÇÃO
 def cadastrar_aluno():
     nome = simpledialog.askstring("Cadastro", "Nome do aluno:")
     if not nome: return
@@ -276,17 +276,17 @@ def listar_turmas():
             msg += f"  Alunos: {len(t['alunos'])}/{t['limite']} | Vagas: {vagas}\n\n"
     messagebox.showinfo("Turmas", msg)
 
-# --- INTERFACE GRÁFICA COM DESIGN MELHORADO ---
+#INTERFACE GRÁFICA COM TKINTER
 def main():
     carregar_dados()
 
     janela = tk.Tk()
     janela.title("🎓 Sistema de Gestão de Matrículas")
     janela.geometry("500x600")
-    janela.resizable(True, True)  # Permite redimensionar nas direções horizontal e vertical
+    janela.resizable(True, True)  #Permite redimensionar as janelas nas direções horizontal e vertical
     janela.configure(bg="#f8f9fa")
 
-    # --- Título Principal ---
+    #Título Principal
     frame_top = tk.Frame(janela, bg="#343a40", height=80)
     frame_top.pack(fill="x")
     frame_top.pack_propagate(False)
@@ -308,11 +308,11 @@ def main():
     titulo.pack(pady=10)
     subtitulo.pack()
 
-    # --- Frame dos Botões ---
+    #Frame dos Botões
     frame_botoes = tk.Frame(janela, bg="#f8f9fa")
     frame_botoes.pack(pady=20, padx=20, fill="both", expand=True)
 
-    # Estilo dos botões
+    #Estilo dos botões
     botoes = [
         ("➕ Cadastrar Aluno", cadastrar_aluno),
         ("📘 Cadastrar Curso", cadastrar_curso),
@@ -339,7 +339,7 @@ def main():
         )
         btn.pack(pady=8, ipadx=10)
 
-    # --- RODAPÉ ---
+    #RODAPÉ
     frame_rodape = tk.Frame(janela, bg="#343a40", height=40)
     frame_rodape.pack(side="bottom", fill="x")
 
@@ -352,7 +352,7 @@ def main():
     )
     label_rodape.pack(pady=10)
 
-    # --- Mensagem inicial ---
+    #Mensagem inicial. Aparece após iniciar o programa
     total_alunos = len(alunos)
     total_cursos = len(cursos)
     total_turmas = len(turmas)
@@ -362,9 +362,9 @@ def main():
         f"Alunos: {total_alunos} | Cursos: {total_cursos} | Turmas: {total_turmas}"
     ))
 
-    # Inicia a interface
+    #Inicia a interface
     janela.mainloop()
 
-# --- EXECUTA O PROGRAMA ---
+#EXECUTA O PROGRAMA
 if __name__ == "__main__":
     main()
