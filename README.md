@@ -36,7 +36,7 @@ Um projeto de sistema simples e intuitivo para gerenciar matrículas escolares, 
 
 ---
 
-Como Executar o Projeto:
+💻 Como Executar o Projeto:
 
 1. Clone o repositório
 ```
@@ -45,6 +45,7 @@ https://github.com/guilhermeoli0/gerenciamento-de-matrículas-em-python.git
 ```
 cd sistema-matriculas
 ```
+
 2. Verifique se o Python está instalado
 ```
 python ou python3 
@@ -55,11 +56,12 @@ python ou python3
 ```
 python matriculas_gui.py
 ```
+
 4. Pronto! Fique a vontade para utilizar o código, atualizar com novas funcionalidades ou adicionar extensões
 
 ---
 Desenvolvido por: 
-Jorge Oliveira
+Jorge Oliveira / Orientação: Prof. José Lucas - UNIRN
 ---
 Contato: https://www.linkedin.com/in/jorge-guilherme-pereira-de-oliveira-522355229/
 Email: jorgepoliveira2004@gmail.com
